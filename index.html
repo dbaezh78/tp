@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/src/ima/ico.ico" type="image/x-icon">
+
+    <!--    <meta http-equiv="refresh" content="1">	-->
+    <title>Laudes </title>
+</head>
+<style>
+    body{
+        font-family: Verdana, Arial;
+        font-size: 22px;
+        background-color: #ffffcc;
+    }
+
+    a {
+        text-decoration: none;
+        color: #FF0000;
+    }
+
+    .topDown,.scroll-to-bottom {
+        background-color: #ffffccc8;    
+        position: fixed;
+        bottom: 20px;
+        z-index: 9999;
+        }
+</style>
+
+<body>
+
+    <a id=top href="./"> <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg> </a>
+  
+    <div style="position: fixed; right: -0; margin-top: -40px;">
+        <select style="color:#FF0000; border: none; background-color:#ffffccc8;" id="sizeFont" onchange="document.getElementById('cuerpo').style.fontSize = this.value + 'em';" style="margin-top: 0; color: red;">
+            <option >Tamaño</option>
+            <option style="color: black;" value="2.0">+Grande</option>
+            <option style="color: black;" value="1.5">Grande</option>
+            <option style="color: black;" value="1.3">Mediano</option>
+            <option style="color: black;" value="1.1">Pequeño</option>
+            <option style="color: black;" value="0.8">+Peq</option>
+            <option style="color: black;" value="0.5">++Peq</option>
+        </select>
+    </div>
+    <br>
+    
+    <div id="cuerpo" class="normal"> <!-- Div de tamaño para todo el contenido-->
+    <a href="#goPlayer"/>
+    <span style="color: red; font-weight: bold;" >LAUDES</span></a><br>
+    <span style="color: red; font-style: italic; font-size: 18px;" >(Oración de la mañana)</span></p>
+
+    <span style="color: red; font-family: Arial;" >INVITATORIO</span><br> 
+    <span style="font-style: italic; color: red; font-family: Arial; font-size: 18px;" >(Si Laudes no es la primera oración del día se sigue el esquema del Invitatorio explicado en el Oficio de Lectura)</span><p/>
+    
+    <span style="color: red; display: inline;">V. </span><span style="display: inline;">Señor abre mis labios.</span><br>
+    <span style="color: red; display: inline;">R. </span><span style="display: inline;">Y mi boca proclamará tu alabanza.</span><br>
+    
+    <p style="color: red; display: inline;">Ant.</p>
+    <p style="display: inline;">Venid, adoremos a Cristo, el Hijo amado, en quien el Padre tiene sus complacencias.</p><br>
+    
+    <p style="color: red;">Salmo 94 INVITACIÓN A LA ALABANZA DIVINA.</p>
+    
+    <!-- Contenedores para mostrar los salmos -->
+    <div id="csal94"></div><br>
+    
+    <span style="color: red; display: inline;">Ant.</span>
+    <span style="display: inline;">Venid, adoremos a Cristo, el Hijo amado, en quien el Padre tiene sus complacencias.</span><br>
+    
+    
+    <p style="color: red;">Himno: CUANDO VUELTO HACIA TI DE MI PECADO</p>
+    <div id="Cuandovueltohaciatidemipecado"></div>
+    
+    <p style="color: red; font-family: Arial;" >SALMODIA</p> 
+
+    <!-- SALMO1-->
+    <p style="color: red; display: inline;">Ant 1.</p><span style="display: inline;">Tu luz, Señor, nos hace ver la luz.</span><br>
+    <p style="color: red;">Salmo 35 - DEPRAVACIÓN DEL MALVADO Y BONDAD DE DIOS</p>
+    <div id="csal35"></div><br>
+    <span style="color: red; display: inline;">Ant.</span><span style="display: inline;">Tu luz, Señor, nos hace ver la luz.</span><pre></pre>
+
+    <!-- SALMO2-->
+    <p style="color: red; display: inline;">Ant 2.</p><span style="display: inline;">Señor, tú eres grande, tu fuerza es invencible.</span><br>
+    <p style="color: red;">Cántico: HIMNO A DIOS CREADOR DEL MUNDO Y PROTECTOR DE SU PUEBLO Jdt 16, 2-3. 15-19</p>
+    <div id="csal149"></div><br>
+    <span style="color: red; display: inline;">Ant.</span><span style="display: inline;">Señor, tú eres grande, tu fuerza es invencible.</span><pre></pre>
+
+    <!-- SALMO3-->
+    <p style="color: red; display: inline;">Ant 3.</p><span style="display: inline;">Aclamad a Dios con gritos de júbilo.</span><br>
+    <p style="color: red;">Salmo 46 - ENTRONIZACIÓN DEL DIOS DE ISRAEL</p>
+    <div id="csal46"></div><br>
+    <span style="color: red; display: inline;">Ant.</span><span style="display: inline;">Aclamad a Dios con gritos de júbilo.</span><pre></pre>
+
+    <p style="color: red;">LECTURA BREVE   Dt 7, 6. 8-9</p>
+    <div id="Dt7,6.8-9"></div>
+    
+    <p style="color: red;">RESPONSORIO BREVE</p>
+    
+    <span style="color: red; display: inline;">V. </span><span style="display: inline;">Él me librará de la red del cazador.</span><br>
+    <span style="color: red; display: inline;">R. </span><span style="display: inline;">Él me librará de la red del cazador.</span><pre></pre>
+    
+    <span style="color: red; display: inline;">V. </span><span style="display: inline;">Me cubrirá con su plumaje.</span><br>
+    <span style="color: red; display: inline;">R. </span><span style="display: inline;">Él me librará de la red del cazador.</span><pre></pre>
+    
+    <span style="color: red; display: inline;">V. </span><span style="display: inline;">Gloria al Padre, y al Hijo, y al Espíritu Santo.</span><br>
+    <span style="color: red; display: inline;">R. </span><span style="display: inline;">Él me librará de la red del cazador.</span><pre></pre>
+
+<!-- ************************* Reproductor ************************* -->
+<i id="goPlayer"><span style="color: #FF0000; font-size: 15px;"id="playLectura">1ra Lectura</span></i>
+
+  <audio id="audioPlayer" controls style="width: 100%;"> </audio>
+  <script>
+    function esPar(year) {
+      return year % 2 === 0;
+    }
+    var year = new Date().getFullYear();
+    var audio = document.getElementById('audioPlayer');
+    if (esPar(year)) { 
+		audio.src = 'src/lectura2.mp3';
+    } else {
+		audio.src = 'src/lectura1.mp3';
+    }
+    audio.play(off);
+  </script>
+  <i><span style="color: #FF0000; font-size: 15px;"id="playLectura">2da Lectura</span></i>
+  <audio src="src/lecturas.mp3" controls style="width: 100%;"> </audio>
+
+<!-- ************************* Reproductor ************************* -->
+
+<!-- BENEDICTUS |   Bendito sea el Señor, Dios de Israel,-->
+<p style="color: red;">CÁNTICO EVANGÉLICO</p>
+<p style="color: red; display: inline;">Ant. </p><span style="display: inline;">Esta raza es una raza perversa: pide una señal, pero no se le dará otra señal que la de Jonás.</span><br>
+<p style="color: red;">Cántico de Zacarías. EL MESÍAS Y SU PRECURSOR      Lc 1, 68-79</p>
+<div id="Lc1,68-79"></div><br>
+<p style="color: red; display: inline;">Ant. </p><span style="display: inline;">Esta raza es una raza perversa: pide una señal, pero no se le dará otra señal que la de Jonás.</span><br>
+<!-- BENEDICTUS |   Bendito sea el Señor, Dios de Israel,-->
+
+<p style="color: red;">PRECES</p>
+
+<div id="tcs1mi"></div>
+
+<p style="color: red;">Se pueden añadir algunas intenciones libres</p>
+
+<p>Digamos al Padre, unidos a Jesús, la oración que él nos enseñó:</p>
+
+<p style="color: red;">Padre nuestro...</p>
+
+<p style="color: red;">ORACION</p>
+
+<div id="tcs1miora"></div>
+
+<p style="color: red;">CONCLUSIÓN</p>
+
+<p style="color: red; display: inline;">V. </p><span style="display: inline;">El Señor nos bendiga, nos guarde de todo mal y nos lleve a la vida eterna.</span><br>
+
+<p style="color: red; display: inline;">R. </p><span style="display: inline;">Amén.</span><br>
+
+
+<!-- JS SALMO-->
+    <script>
+        // Función para cargar y mostrar un salmo específico
+        function cargarSalmo(idSalmo, contenedorId) {
+            const rutaArchivo = `/src/sal/${idSalmo}.txt`; // Ruta del archivo
+
+            fetch(rutaArchivo)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`No se pudo cargar el salmo: ${idSalmo}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // Reemplazar saltos de línea con <br> o usar <pre>
+                    const contenidoFormateado = data.replace(/\n/g, '<br>');
+                    document.getElementById(contenedorId).innerHTML = contenidoFormateado;
+                })
+                .catch(error => {
+                    console.error(error);
+                    document.getElementById(contenedorId).textContent = `Error al cargar el salmo: ${idSalmo}`;
+                });
+        }
+
+        // Cargar salmos específicos en contenedores específicos
+        cargarSalmo('sal35', 'csal35');     // El malvado escucha en su interior
+        cargarSalmo('sal46', 'csal46');     // Pueblos todos, batid palmas
+        cargarSalmo('sal94', 'csal94');     // Venid, aclamemos al Señor
+        cargarSalmo('sal149', 'csal149');   // Cantad al Señor un cantico nuevo
+        cargarSalmo('sal62_2_9', 'csal62'); // 
+        cargarSalmo('Lc1,68-79', 'Lc1,68-79'); //Cantico de Zacarias
+
+    </script>
+
+    <!-- HIMNOS-->
+    <script>
+        // Función para cargar y mostrar un salmo específico
+        function cargarHimnos(idHimnos, contenedorId) {
+            const rutaArchivo = `/src/himno/${idHimnos}.txt`; // Ruta del archivo
+
+            fetch(rutaArchivo)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`No se pudo cargar el Himno: ${idHimnos}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // Reemplazar saltos de línea con <br> o usar <pre>
+                    const contenidoFormateado = data.replace(/\n/g, '<br>');
+                    document.getElementById(contenedorId).innerHTML = contenidoFormateado;
+                })
+                .catch(error => {
+                    console.error(error);
+                    document.getElementById(contenedorId).textContent = `Error al cargar el salmo: ${idHimnos}`;
+                });
+        }
+
+        // Cargar salmos específicos en contenedores específicos
+        cargarHimnos('VenSenorNoTardes', 'VenSenorNoTardes');
+        cargarHimnos('Cuandovueltohaciatidemipecado', 'Cuandovueltohaciatidemipecado');
+        cargarHimnos('sal62_2_9', 'csal62');
+    </script>
+
+
+<!-- JS LECTURA BREVE-->
+<script>
+    // Función para cargar y mostrar un salmo específico
+    function cargarLecturaBreve(idlBreve, contenedorId) {
+        const rutaArchivo = `/src/lectbreve/${idlBreve}.txt`; // Ruta del archivo
+
+        fetch(rutaArchivo)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`No se pudo cargar la lectura breve: ${idlBreve}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Reemplazar saltos de línea con <br> o usar <pre>
+                const contenidoFormateado = data.replace(/\n/g, '<br>');
+                document.getElementById(contenedorId).innerHTML = contenidoFormateado;
+            })
+            .catch(error => {
+                console.error(error);
+                document.getElementById(contenedorId).textContent = `Error al cargar el salmo: ${idlBreve}`;
+            });
+    }
+
+    // Cargar salmos específicos en contenedores específicos
+    cargarLecturaBreve('Dt7,6.8-9', 'Dt7,6.8-9');
+    cargarLecturaBreve('Dt7,6.8-9', 'Dt7,6.8-9');
+</script>
+
+
+<!-- JS PRESES-->
+<script>
+    // Función para cargar y mostrar un salmo específico
+    function cargarpreses(idPreses, contenedorId) {
+        const rutaArchivo = `/src/preces/${idPreses}.txt`; // Ruta del archivo
+
+        fetch(rutaArchivo)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`No se pudo cargar el salmo: ${idPreses}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Reemplazar saltos de línea con <br> o usar <pre>
+                const contenidoFormateado = data.replace(/\n/g, '<br>');
+                document.getElementById(contenedorId).innerHTML = contenidoFormateado;
+            })
+            .catch(error => {
+                console.error(error);
+                document.getElementById(contenedorId).textContent = `Error al cargar el salmo: ${idPreses}`;
+            });
+    }
+
+    // Cargar Preses específicos en contenedores específicos
+    cargarpreses('tcs1mi', 'tcs1mi');
+    cargarpreses('tcs1mi', 'tcs1mi');
+
+</script>
+
+<!-- JS ORACION FINAL-->
+<script>
+    // Función para cargar y mostrar un salmo específico
+    function cargaroracion(idOracion, contenedorId) {
+        const rutaArchivo = `/src/oracion/${idOracion}.txt`; // Ruta del archivo
+
+        fetch(rutaArchivo)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`No se pudo cargar el salmo: ${idOracion}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Reemplazar saltos de línea con <br> o usar <pre>
+                const contenidoFormateado = data.replace(/\n/g, '<br>');
+                document.getElementById(contenedorId).innerHTML = contenidoFormateado;
+            })
+            .catch(error => {
+                console.error(error);
+                document.getElementById(contenedorId).textContent = `Error al cargar la Oracion: ${idOracion}`;
+            });
+    }
+
+    // Cargar salmos específicos en contenedores específicos
+    cargaroracion('tcs1doora', 'tcs1doora');
+    cargaroracion('tcs1miora', 'tcs1miora');
+    cargaroracion('tos1luora', 'tos1luora');
+
+</script>
+
+</div> <!-- DIV DE CIERRE DEL TAMAÑO DE LA FUENTE-->
+
+<div id=down /> <!--POSICION DE BAJADA -->
+
+</body>
+</html>
+
+<br>
+<div style="color: #FF0000; right: 20px; bottom: -0;" class="topDown"> <a href="#" id="top">&#8593;</a> <a href="#" onclick="ppjs()">Of</a> <a href="laudes.htm">La</a> <a href="tercia.htm">Tr</A> <A href="sexta.htm">Sx</A> <A href="nona.htm">Nn</A> <A href="visperas.htm">Vs</A> <A href="completas.htm">Cm</A> <a href="#down" id="down">&#8595;</a> </div>
