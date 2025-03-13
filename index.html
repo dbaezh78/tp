@@ -100,16 +100,17 @@
     var year = new Date().getFullYear();
     var audio = document.getElementById('audioPlayer');
     if (esPar(year)) { 
-		audio.src = 'src/lectura2.mp3';
+        audio.src = '/lect2/to/1/1/lectura2.mp3';
+        
     } else {
-		audio.src = 'src/lectura1.mp3';
+        audio.src = '/lect1/to/1/1/lectura1.mp3';
     }
     audio.play(off);
 </script>
 
   <i><span class="sMplayer" id="playLectura">2da Lectura</span></i>
-  <audio src="src/lecturas.mp3" controls style="width: 100%;"> </audio>
-  <i><span class="sMplayer" id="playLectura">Evangelio</span></i>
+  <audio src="/lects/to/1/1/lecturas.mp3" controls style="width: 100%;"> </audio>
+    <i><span class="sMplayer" id="playLectura">Evangelio</span></i>
   <audio src="/evangelio/to/1/1/lunes.mp3" controls style="width: 100%;"> </audio>
   
 <!-- ************************* Reproductor ************************* -->
