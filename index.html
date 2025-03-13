@@ -141,171 +141,20 @@
 
 <p class="drojo">V. </p><span class="psubt">El Señor nos bendiga, nos guarde de todo mal y nos lleve a la vida eterna.</span><br>
 
-<p class="drojo">R. </p><span class="psubt">Amén.</span><br>
-
-
-<!-- JS SALMO-->
-    <script>
-        // Función para cargar y mostrar un salmo específico
-        function cargarSalmo(idSalmo, contenedorId) {
-            const rutaArchivo = `/src/sal/${idSalmo}.txt`; // Ruta del archivo
-
-            fetch(rutaArchivo)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`No se pudo cargar el salmo: ${idSalmo}`);
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    // Reemplazar saltos de línea con <br> o usar <pre>
-                    const contenidoFormateado = data.replace(/\n/g, '<br>');
-                    document.getElementById(contenedorId).innerHTML = contenidoFormateado;
-                })
-                .catch(error => {
-                    console.error(error);
-                    document.getElementById(contenedorId).textContent = `Error al cargar el salmo: ${idSalmo}`;
-                });
-        }
-
-        // Cargar salmos específicos en contenedores específicos
-        cargarSalmo('sal35', 'csal35');     // El malvado escucha en su interior
-        cargarSalmo('sal46', 'csal46');     // Pueblos todos, batid palmas
-        cargarSalmo('sal94', 'csal94');     // Venid, aclamemos al Señor
-        cargarSalmo('sal149', 'csal149');   // Cantad al Señor un cantico nuevo
-        cargarSalmo('sal62_2_9', 'csal62'); // 
-        cargarSalmo('Lc1,68-79', 'Lc1,68-79'); //Cantico de Zacarias
-
-    </script>
-
-    <!-- HIMNOS-->
-    <script>
-        // Función para cargar y mostrar un salmo específico
-        function cargarHimnos(idHimnos, contenedorId) {
-            const rutaArchivo = `/src/himno/${idHimnos}.txt`; // Ruta del archivo
-
-            fetch(rutaArchivo)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`No se pudo cargar el Himno: ${idHimnos}`);
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    // Reemplazar saltos de línea con <br> o usar <pre>
-                    const contenidoFormateado = data.replace(/\n/g, '<br>');
-                    document.getElementById(contenedorId).innerHTML = contenidoFormateado;
-                })
-                .catch(error => {
-                    console.error(error);
-                    document.getElementById(contenedorId).textContent = `Error al cargar el salmo: ${idHimnos}`;
-                });
-        }
-
-        // Cargar salmos específicos en contenedores específicos
-        cargarHimnos('VenSenorNoTardes', 'VenSenorNoTardes');
-        cargarHimnos('Cuandovueltohaciatidemipecado', 'Cuandovueltohaciatidemipecado');
-        cargarHimnos('sal62_2_9', 'csal62');
-    </script>
-
-
-<!-- JS LECTURA BREVE-->
-<script>
-    // Función para cargar y mostrar un salmo específico
-    function cargarLecturaBreve(idlBreve, contenedorId) {
-        const rutaArchivo = `/src/lectbreve/${idlBreve}.txt`; // Ruta del archivo
-
-        fetch(rutaArchivo)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`No se pudo cargar la lectura breve: ${idlBreve}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                // Reemplazar saltos de línea con <br> o usar <pre>
-                const contenidoFormateado = data.replace(/\n/g, '<br>');
-                document.getElementById(contenedorId).innerHTML = contenidoFormateado;
-            })
-            .catch(error => {
-                console.error(error);
-                document.getElementById(contenedorId).textContent = `Error al cargar el salmo: ${idlBreve}`;
-            });
-    }
-
-    // Cargar salmos específicos en contenedores específicos
-    cargarLecturaBreve('Dt7,6.8-9', 'Dt7,6.8-9');
-    cargarLecturaBreve('Dt7,6.8-9', 'Dt7,6.8-9');
-</script>
-
-
-<!-- JS PRESES-->
-<script>
-    // Función para cargar y mostrar un salmo específico
-    function cargarpreses(idPreses, contenedorId) {
-        const rutaArchivo = `/src/preces/${idPreses}.txt`; // Ruta del archivo
-
-        fetch(rutaArchivo)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`No se pudo cargar el salmo: ${idPreses}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                // Reemplazar saltos de línea con <br> o usar <pre>
-                const contenidoFormateado = data.replace(/\n/g, '<br>');
-                document.getElementById(contenedorId).innerHTML = contenidoFormateado;
-            })
-            .catch(error => {
-                console.error(error);
-                document.getElementById(contenedorId).textContent = `Error al cargar el salmo: ${idPreses}`;
-            });
-    }
-
-    // Cargar Preses específicos en contenedores específicos
-    cargarpreses('tcs1mi', 'tcs1mi');
-    cargarpreses('tcs1mi', 'tcs1mi');
-
-</script>
-
-<!-- JS ORACION FINAL-->
-<script>
-    // Función para cargar y mostrar un salmo específico
-    function cargaroracion(idOracion, contenedorId) {
-        const rutaArchivo = `/src/oracion/${idOracion}.txt`; // Ruta del archivo
-
-        fetch(rutaArchivo)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`No se pudo cargar el salmo: ${idOracion}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                // Reemplazar saltos de línea con <br> o usar <pre>
-                const contenidoFormateado = data.replace(/\n/g, '<br>');
-                document.getElementById(contenedorId).innerHTML = contenidoFormateado;
-            })
-            .catch(error => {
-                console.error(error);
-                document.getElementById(contenedorId).textContent = `Error al cargar la Oracion: ${idOracion}`;
-            });
-    }
-
-    // Cargar salmos específicos en contenedores específicos
-    cargaroracion('tcs1doora', 'tcs1doora');
-    cargaroracion('tcs1miora', 'tcs1miora');
-    cargaroracion('tos1luora', 'tos1luora');
-
-</script>
+<p class="drojo">R. </p><span class="psubt">Amén.</p><br>
 
 </div> <!-- DIV DE CIERRE DEL TAMAÑO DE LA FUENTE-->
 
 <div id=down /> <!--POSICION DE BAJADA -->
 
+<script src="/src/js/himno.js"></script>
+<script src="/src/js/salmo.js"></script>
+<script src="/src/js/oracion.js"></script>
+<script src="/src/js/preces.js"></script>
+<script src="/src/js/lectbreve.js"></script>
+
 </body>
 </html>
 
-<br>
+<br><br>
 <div class="pie topDown"> <a href="#" id="top">&#8593;</a> <a href="#" onclick="ppjs()">Of</a> <a href="laudes.htm">La</a> <a href="tercia.htm">Tr</A> <A href="sexta.htm">Sx</A> <A href="nona.htm">Nn</A> <A href="visperas.htm">Vs</A> <A href="completas.htm">Cm</A> <a href="#down" id="down">&#8595;</a> </div>
