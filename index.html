@@ -4,112 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/src/ima/ico.ico" type="image/x-icon">
+    <link href="/src/css/style.css" type=text/css rel=stylesheet>
 
     <!--    <meta http-equiv="refresh" content="1">	-->
     <title>Laudes </title>
 </head>
-<style>
-    body{
-        font-family: Verdana, Arial;
-        font-size: 22px;
-        background-color: #ffffcc;
-    }
-
-    a {
-        text-decoration: none;
-        color: #FF0000;
-    }
-
-    .topDown,.scroll-to-bottom {
-        background-color: #ffffccc8;    
-        position: fixed;
-        bottom: 20px;
-        z-index: 9999;
-        }
-</style>
 
 <body>
 
     <a id=top href="./"> <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg> </a>
   
-    <div style="position: fixed; right: -0; margin-top: -40px;">
-        <select style="color:#FF0000; border: none; background-color:#ffffccc8;" id="sizeFont" onchange="document.getElementById('cuerpo').style.fontSize = this.value + 'em';" style="margin-top: 0; color: red;">
-            <option >Tamaño</option>
-            <option style="color: black;" value="2.0">+Grande</option>
-            <option style="color: black;" value="1.5">Grande</option>
-            <option style="color: black;" value="1.3">Mediano</option>
-            <option style="color: black;" value="1.1">Pequeño</option>
-            <option style="color: black;" value="0.8">+Peq</option>
-            <option style="color: black;" value="0.5">++Peq</option>
+    <div class="tamaño">    <!--clase ubicado en el archivo style.css-->
+        <select class="TamSelect" onchange="document.getElementById('cuerpo').style.fontSize = this.value + 'em';" class="TamSelect2">
+            <option selected disabled hidden>Tamaño</option> <!-- Opción por defecto, no seleccionable --> <hr>
+            <option class="colorop" value="2.0">+Grande</option>
+            <option class="colorop" value="1.5">Grande</option>
+            <option class="colorop" value="1.3">Mediano</option>
+            <option class="colorop" value="1.1">Pequeño</option>
+            <option class="colorop" value="0.8">+Peq</option>
+            <option class="colorop" value="0.5">++Peq</option>
         </select>
     </div>
     <br>
     
     <div id="cuerpo" class="normal"> <!-- Div de tamaño para todo el contenido-->
     <a href="#goPlayer"/>
-    <span style="color: red; font-weight: bold;" >LAUDES</span></a><br>
-    <span style="color: red; font-style: italic; font-size: 18px;" >(Oración de la mañana)</span></p>
+    <span class="titulo" >LAUDES</span></a><br>
+    <span class="stItaly" >(Oración de la mañana)</span></p>
 
-    <span style="color: red; font-family: Arial;" >INVITATORIO</span><br> 
-    <span style="font-style: italic; color: red; font-family: Arial; font-size: 18px;" >(Si Laudes no es la primera oración del día se sigue el esquema del Invitatorio explicado en el Oficio de Lectura)</span><p/>
+    <span class="subtitulo" >INVITATORIO</span><br> 
+    <span class="stcomment" >(Si Laudes no es la primera oración del día se sigue el esquema del Invitatorio explicado en el Oficio de Lectura)</span><p/>
     
-    <span style="color: red; display: inline;">V. </span><span style="display: inline;">Señor abre mis labios.</span><br>
-    <span style="color: red; display: inline;">R. </span><span style="display: inline;">Y mi boca proclamará tu alabanza.</span><br>
+    <span class="drojo">V. </span><span class="psubt" >Señor abre mis labios.</span><br>
+    <span class="drojo">R. </span><span class="psubt" >Y mi boca proclamará tu alabanza.</span><br>
     
-    <p style="color: red; display: inline;">Ant.</p>
-    <p style="display: inline;">Venid, adoremos a Cristo, el Hijo amado, en quien el Padre tiene sus complacencias.</p><br>
+    <p class="drojo" >Ant.</p>
+    <p class="psubt" >Venid, adoremos a Cristo, el Hijo amado, en quien el Padre tiene sus complacencias.</p><br>
     
-    <p style="color: red;">Salmo 94 INVITACIÓN A LA ALABANZA DIVINA.</p>
+    <p class="subtitulo" >Salmo 94 INVITACIÓN A LA ALABANZA DIVINA.</p>
     
     <!-- Contenedores para mostrar los salmos -->
     <div id="csal94"></div><br>
     
-    <span style="color: red; display: inline;">Ant.</span>
-    <span style="display: inline;">Venid, adoremos a Cristo, el Hijo amado, en quien el Padre tiene sus complacencias.</span><br>
+    <span class="drojo">Ant.</span>
+    <span class="psubt">Venid, adoremos a Cristo, el Hijo amado, en quien el Padre tiene sus complacencias.</span><br>
     
     
-    <p style="color: red;">Himno: CUANDO VUELTO HACIA TI DE MI PECADO</p>
+    <p class="subtitulo" >Himno: CUANDO VUELTO HACIA TI DE MI PECADO</p>
     <div id="Cuandovueltohaciatidemipecado"></div>
     
-    <p style="color: red; font-family: Arial;" >SALMODIA</p> 
+    <p class="subtitulo">SALMODIA</p> 
 
     <!-- SALMO1-->
-    <p style="color: red; display: inline;">Ant 1.</p><span style="display: inline;">Tu luz, Señor, nos hace ver la luz.</span><br>
-    <p style="color: red;">Salmo 35 - DEPRAVACIÓN DEL MALVADO Y BONDAD DE DIOS</p>
+    <p class="drojo">Ant 1.</p><span class="psubt">Tu luz, Señor, nos hace ver la luz.</span><br>
+    <p class="subtitulo">Salmo 35 - DEPRAVACIÓN DEL MALVADO Y BONDAD DE DIOS</p>
     <div id="csal35"></div><br>
-    <span style="color: red; display: inline;">Ant.</span><span style="display: inline;">Tu luz, Señor, nos hace ver la luz.</span><pre></pre>
+    <span class="drojo">Ant.</span><span class="psubt">Tu luz, Señor, nos hace ver la luz.</span><pre></pre>
 
     <!-- SALMO2-->
-    <p style="color: red; display: inline;">Ant 2.</p><span style="display: inline;">Señor, tú eres grande, tu fuerza es invencible.</span><br>
-    <p style="color: red;">Cántico: HIMNO A DIOS CREADOR DEL MUNDO Y PROTECTOR DE SU PUEBLO Jdt 16, 2-3. 15-19</p>
+    <p class="drojo">Ant 2.</p><span class="psubt">Señor, tú eres grande, tu fuerza es invencible.</span><br>
+    <p class="subtitulo">Cántico: HIMNO A DIOS CREADOR DEL MUNDO Y PROTECTOR DE SU PUEBLO Jdt 16, 2-3. 15-19</p>
     <div id="csal149"></div><br>
-    <span style="color: red; display: inline;">Ant.</span><span style="display: inline;">Señor, tú eres grande, tu fuerza es invencible.</span><pre></pre>
+    <span class="drojo">Ant.</span><span class="psubt">Señor, tú eres grande, tu fuerza es invencible.</span><pre></pre>
 
     <!-- SALMO3-->
-    <p style="color: red; display: inline;">Ant 3.</p><span style="display: inline;">Aclamad a Dios con gritos de júbilo.</span><br>
-    <p style="color: red;">Salmo 46 - ENTRONIZACIÓN DEL DIOS DE ISRAEL</p>
+    <p class="drojo">Ant 3.</p><span class="psubt">Aclamad a Dios con gritos de júbilo.</span><br>
+    <p class="subtitulo">Salmo 46 - ENTRONIZACIÓN DEL DIOS DE ISRAEL</p>
     <div id="csal46"></div><br>
-    <span style="color: red; display: inline;">Ant.</span><span style="display: inline;">Aclamad a Dios con gritos de júbilo.</span><pre></pre>
+    <span class="drojo">Ant.</span><span class="psubt">Aclamad a Dios con gritos de júbilo.</span><pre></pre>
 
-    <p style="color: red;">LECTURA BREVE   Dt 7, 6. 8-9</p>
+    <!-- LECTURA BREVE -->
+    <p class="subtitulo">LECTURA BREVE Dt 7, 6. 8-9</p>
     <div id="Dt7,6.8-9"></div>
     
-    <p style="color: red;">RESPONSORIO BREVE</p>
+    <p class="subtitulo">RESPONSORIO BREVE</p>
     
-    <span style="color: red; display: inline;">V. </span><span style="display: inline;">Él me librará de la red del cazador.</span><br>
-    <span style="color: red; display: inline;">R. </span><span style="display: inline;">Él me librará de la red del cazador.</span><pre></pre>
+    <span class="drojo">V. </span><span class="psubt">Él me librará de la red del cazador.</span><br>
+    <span class="drojo">R. </span><span class="psubt">Él me librará de la red del cazador.</span><pre></pre>
     
-    <span style="color: red; display: inline;">V. </span><span style="display: inline;">Me cubrirá con su plumaje.</span><br>
-    <span style="color: red; display: inline;">R. </span><span style="display: inline;">Él me librará de la red del cazador.</span><pre></pre>
+    <span class="drojo">V. </span><span class="psubt">Me cubrirá con su plumaje.</span><br>
+    <span class="drojo">R. </span><span class="psubt">Él me librará de la red del cazador.</span><pre></pre>
     
-    <span style="color: red; display: inline;">V. </span><span style="display: inline;">Gloria al Padre, y al Hijo, y al Espíritu Santo.</span><br>
-    <span style="color: red; display: inline;">R. </span><span style="display: inline;">Él me librará de la red del cazador.</span><pre></pre>
+    <span class="drojo">V. </span><span class="psubt">Gloria al Padre, y al Hijo, y al Espíritu Santo.</span><br>
+    <span class="drojo">R. </span><span class="psubt">Él me librará de la red del cazador.</span><pre></pre>
 
 <!-- ************************* Reproductor ************************* -->
-<i id="goPlayer"><span style="color: #FF0000; font-size: 15px;"id="playLectura">1ra Lectura</span></i>
 
+<i id="goPlayer"><span class="sMplayer" id="playLectura">1ra Lectura</span></i>
   <audio id="audioPlayer" controls style="width: 100%;"> </audio>
-  <script>
+
+<script>
     function esPar(year) {
       return year % 2 === 0;
     }
@@ -121,8 +105,9 @@
 		audio.src = 'src/lectura1.mp3';
     }
     audio.play(off);
-  </script>
-  <i><span style="color: #FF0000; font-size: 15px;"id="playLectura">2da Lectura</span></i>
+</script>
+
+  <i><span class="sMplayer" id="playLectura">2da Lectura</span></i>
   <audio src="src/lecturas.mp3" controls style="width: 100%;"> </audio>
 
 <!-- ************************* Reproductor ************************* -->
